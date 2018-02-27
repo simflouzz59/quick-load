@@ -90,7 +90,7 @@ displayProgress () {
     pourcentage=$1
 	lastResponseCode=`validateHttpCode $2`
 	progressBar=`getProgressString $(($pourcentage/2))`
-    echo -ne "\r${LIGHTGREEN}$progressBar| ${pourcentage}% ${NC}| ${LIGHTBLUE}$executionCount/$count ${NC}| ${LIGHTRED}$lastResponseCode (last response code)${NC}"
+    echo -ne "\r${LIGHTGREEN}$progressBar| ${pourcentage}% ${NC}| ${LIGHTBLUE}$executionCount/$count ${NC}| ${LIGHTRED}$lastResponseCode (last response code)${NC}\c"
 }
 
 printf "${LIGHTCYAN}  _     ___    _    ____  _____ ____  \n";
